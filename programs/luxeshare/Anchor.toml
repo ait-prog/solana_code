@@ -1,0 +1,15 @@
+[toolchain]
+anchor_version = "0.29.0"
+
+[programs.devnet]
+luxeshare = "EF9CQ7WfxzUmTpmQxhMv9WFCJoLkyTKniXdDYXaUg5Kh"
+
+[programs.localnet]
+luxeshare = "EF9CQ7WfxzUmTpmQxhMv9WFCJoLkyTKniXdDYXaUg5Kh"
+
+[provider]
+cluster = "localnet"
+wallet = "/home/dmin/.config/solana/id.json"
+
+[scripts]
+test = "pnpm -C ts test"
