@@ -6,7 +6,7 @@ use anchor_spl::token_interface::{self as spl_if, Mint, TokenAccount, TokenInter
 // Program ID
 // -----------------------------------------------------------------------------
 
-declare_id!("11111111111111111111111111111111");
+declare_id!("EF9CQ7WfxzUmTpmQxhMv9WFCJoLkyTKniXdDYXaUg5Kh");
 
 // -----------------------------------------------------------------------------
 // Program
