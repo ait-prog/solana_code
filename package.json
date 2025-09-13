@@ -1,0 +1,23 @@
+{
+  "name": "luxeshare",
+  "version": "1.0.0",
+  "description": "luxeshare/\r ├─ Anchor.toml                 # конфиг Anchor (кластер, кошелёк, скрипты)\r ├─ Cargo.toml                  # корневой Cargo workspace\r ├─ programs/\r │  └─ luxeshare/\r │     ├─ Cargo.toml\r │     └─ src/\r │        └─ lib.rs            # Anchor программа (Rust) — логика токенизации/аренды/доходов\r ├─ ts/\r │  ├─ package.json\r │  ├─ tsconfig.json\r │  ├─ .env.example\r │  ├─ idl/\r │  │  └─ luxeshare.json       # IDL, генерится anchor'ом (или положи сюда после build)\r │  └─ scripts/\r │     ├─ setup.ts             # создаёт devnet mint'ы, ATA; вызывает init_asset\r │     ├─ flow.ts              # e2e: mint_shares → stake → update_price → rent → claim\r │     └─ keeper-update-price.ts # оффчейн-кипер: берёт цену у ML, вызывает update_price\r ├─ backend/\r │  ├─ requirements.txt\r │  └─ app.py                  # FastAPI ML-прайсер (заглушка)\r └─ web/\r    ├─ package.json\r    ├─ next.config.js\r    └─ app/\r       └─ page.tsx             # минимальный UI (Anchor вызовы из браузера)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
